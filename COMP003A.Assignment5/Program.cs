@@ -14,9 +14,7 @@ namespace COMP003A.Assignment5
         static void Main(string[] args)
         {
             //
-            PrintSeparator();
             PrintSeparator("Triangle");
-            PrintSeparator();
             Console.Write("Enter a single character: ");
             char inputChar = Convert.ToChar(Console.ReadLine());
             Console.Write("Enter a positive whole number: ");
@@ -25,9 +23,7 @@ namespace COMP003A.Assignment5
             //
 
             //
-            PrintSeparator();
             PrintSeparator("Favorite Characters");
-            PrintSeparator();
             CharacterInfo("Batman", 1939);
             CharacterInfo("Kermit the Frog", 1955);
             CharacterInfo("Solid Snake", 1972);
@@ -53,7 +49,9 @@ namespace COMP003A.Assignment5
         /// <param name="name">Name of Section</param>
         static void PrintSeparator(string name)
         {
-            Console.WriteLine($"\t{name} Section"); 
+            PrintSeparator();
+            Console.WriteLine($"\t{name} Section");
+            PrintSeparator();
         }
 
         /// <summary>
