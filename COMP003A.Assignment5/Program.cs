@@ -17,7 +17,6 @@ namespace COMP003A.Assignment5
             PrintSeparator();
             PrintSeparator("Triangle");
             PrintSeparator();
-            Console.WriteLine("\n");
             Console.Write("Enter a single character: ");
             char inputChar = Convert.ToChar(Console.ReadLine());
             Console.Write("Enter a positive whole number: ");
