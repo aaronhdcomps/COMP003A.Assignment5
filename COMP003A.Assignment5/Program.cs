@@ -61,16 +61,18 @@ namespace COMP003A.Assignment5
         /// <param name="size">Size of triangle input</param>
         static void IsoscelesTriangleBuilder(char inputCharacter, int size)
         {
-            string output = Convert.ToString(inputCharacter);
+            //string output = Convert.ToString(inputCharacter); <------------------do not need to convert char to string due to casting type.
             for (int i = 0; i < size; i++)
             {
-                Console.WriteLine(output);
-                output += Convert.ToString(inputCharacter);                           
+                Console.WriteLine($"".PadRight(i, inputCharacter));
+            //  output += Convert.ToString(inputCharacter);  <---------------------do not need conversion or concantination                          
             }
-            
-            for (int i = 0; i <= size; i++)
+
+            //for (int i = 0; i <= size; i++)   <----------------------------------do not need to use
+            for (int i = size; i > 0; i--)
             {
-                Console.WriteLine(output.Substring(i));
+                Console.WriteLine($"".PadRight(i, inputCharacter));
+            //  Console.WriteLine(output.Substring(i));  <-------------------------no longer needed since using padding
             }
                  
         }
@@ -80,7 +82,7 @@ namespace COMP003A.Assignment5
         /// <param name="year">Year born input</param>
         static int AgeCalculator(int year)
         {
-            int age = 2023 - year;
+            int age = DateTime.Now.Year - year;
             return age;
         }
 
